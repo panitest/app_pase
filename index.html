@@ -30,7 +30,7 @@ body {
 #footer span{ color:#FFF; opacity:1; font-family:Arial, Helvetica, sans-serif; font-size:12px; width:200px; display:inline-block; line-height:normal; padding-top:10px}
 #footer div{ }
 
-#header{ height:62px; background:#005474; width:100%; border:2px solid #004D6E; position:fixed; z-index:2000; box-sizing:border-box}
+#header{ height:62px; background:#005474; width:100%; border:2px solid #004D6E; position:fixed; z-index:1000; box-sizing:border-box}
 #button_home{ width:55px; height:60px; border-right:2px solid #004D6E; background: url(images/menu_home_bg.png) center center no-repeat; background-size:50px 58px; float:left; cursor:pointer}
 @font-face {
     font-family: 'movistar_headlineregular';
@@ -63,7 +63,7 @@ and (max-width : 320px) {
 #tap{position:absolute; width:100%; height:100%; background: url(images/app_4g_home_Loader.png) center center no-repeat #0999B7; background-size:contain;  left:0; top:0; z-index:100;}
 #tap2,#tap3{position:absolute; width:100%; height:0; background: url(images/app_4g_home_Loader.png) center center no-repeat #0999B7; background-size:contain;  left:0; top:0; z-index:1000; visibility:hidden}
 #terminos{ width:90%;height:100%; background:#E5E5E5; margin:auto; background:#fff; margin-top:0}
-#text_terms{ width:90%; height:70%; margin:auto; position:relative;  overflow:auto; background:#005474;  font-family:movistar_headlineregular;   color:#FFF; font-size:10px; padding:10px; z-index:2000}
+#text_terms{ width:90%; height:70%; margin:auto; position:relative;  overflow:auto; background:#005474;  font-family:movistar_headlineregular;   color:#FFF; font-size:10px; padding:10px; }
 #title4{ width:90%; padding:0 ;  font-family:movistar_headlineregular; padding-top:20px;  padding-bottom:10px;  color:#0F5C84; font-size:14px; margin:auto }
 
 ::-webkit-scrollbar{
@@ -704,7 +704,7 @@ function getQueryVariable(query,variable)
 function getLocationIframe(){
 	/**/
 	var doc= $('ifr2').contentDocument || $('ifr2').contentWindow.document;
-	if(doc.URL.indexOf('code')==-1){
+	if(doc.URL.indexOf('movistar')==-1){
 		return setTimeout(getLocationIframe,500);
 	}
 	var code=getQueryVariable(doc.URL.split('?').pop(),'code');
